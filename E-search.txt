@@ -1,0 +1,1 @@
+search -db pubmed -query "lysosome AND (OPC OR neurological+disorder OR neurodevelopment OR neurodegeneration)" | efetch -format xml | xtract -pattern PubmedArticle -sep ";" -def "NA" -element AbstractText PMID DescriptorName -block PubDate -first PubDate -element Year >/Users/poles/Downloads/lysosome_AND_metabolism.txt}
